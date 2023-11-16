@@ -35,12 +35,14 @@ namespace RabbitMQDashboard
 
         private void btnCreateProducers_Click(object sender, EventArgs e)
         {
-
+            Producer producer = new Producer();
+            producer.Show();
         }
 
         private void btnCreateConsumers_Click(object sender, EventArgs e)
         {
-
+            Consumer consumer = new Consumer();
+            consumer.Show();
         }
 
         private void btnCreateQueue_Click(object sender, EventArgs e)

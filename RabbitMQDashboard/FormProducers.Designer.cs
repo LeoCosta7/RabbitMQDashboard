@@ -1,6 +1,6 @@
 ﻿namespace RabbitMQDashboard
 {
-    partial class FormProducers
+    partial class Producer
     {
         /// <summary>
         /// Required designer variable.
@@ -105,7 +105,7 @@
             btnSendMessage.UseVisualStyleBackColor = true;
             btnSendMessage.Click += btnSendMessage_Click;
             // 
-            // FormProducers
+            // Producer
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -118,8 +118,8 @@
             Controls.Add(txtRK);
             Controls.Add(label1);
             Controls.Add(txtQueueSelected);
-            Name = "FormProducers";
-            Text = "FormProducers";
+            Name = "Producer";
+            Text = "Producers";
             ResumeLayout(false);
             PerformLayout();
         }

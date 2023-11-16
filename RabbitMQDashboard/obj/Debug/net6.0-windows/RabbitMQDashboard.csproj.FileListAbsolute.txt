@@ -19,3 +19,6 @@ C:\Users\Nameless\Documents\Github\RabbitMQDashboard\RabbitMQDashboard\obj\Debug
 C:\Users\Nameless\Documents\Github\RabbitMQDashboard\RabbitMQDashboard\obj\Debug\net6.0-windows\RabbitMQDashboard.pdb
 C:\Users\Nameless\Documents\Github\RabbitMQDashboard\RabbitMQDashboard\obj\Debug\net6.0-windows\RabbitMQDashboard.genruntimeconfig.cache
 C:\Users\Nameless\Documents\Github\RabbitMQDashboard\RabbitMQDashboard\obj\Debug\net6.0-windows\ref\RabbitMQDashboard.dll
+C:\Users\Nameless\Documents\Github\RabbitMQDashboard\RabbitMQDashboard\obj\Debug\net6.0-windows\RabbitMQDashboard.Consumer.resources
+C:\Users\Nameless\Documents\Github\RabbitMQDashboard\RabbitMQDashboard\obj\Debug\net6.0-windows\RabbitMQDashboard.Producer.resources
+C:\Users\Nameless\Documents\Github\RabbitMQDashboard\RabbitMQDashboard\obj\Debug\net6.0-windows\RabbitMQDashboard.ConsumerTopic.resources
