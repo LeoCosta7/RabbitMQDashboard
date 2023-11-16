@@ -17,13 +17,20 @@ namespace RabbitMQDashboard
 
         private void btnSubscribe_Click(object sender, EventArgs e)
         {
-            channel = RabbitMQManager.GetChannel();
-            queueName = GetQueueName();
+            try
+            {
+                channel = RabbitMQManager.GetChannel();
+                queueName = GetQueueName();
 
-            channel.QueueDeclare(queue: queueName, durable: true, exclusive: false, autoDelete: false);
-            channel.QueueBind(queue: queueName, exchange: txtExchangeName.Text, routingKey: txtRK.Text);
+                channel.QueueDeclare(queue: queueName, durable: true, exclusive: false, autoDelete: false);
+                channel.QueueBind(queue: queueName, exchange: txtExchangeName.Text, routingKey: txtRK.Text);
 
-            GetTopicMsg();
+                GetTopicMsg();
+            }
+            catch
+            {
+                MessageBox.Show("Topico inexistente");
+            }            
         }
 
         private string GetQueueName()

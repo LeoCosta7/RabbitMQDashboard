@@ -42,6 +42,9 @@
             dataGridView = new DataGridView();
             QueueName = new DataGridViewTextBoxColumn();
             Ready = new DataGridViewTextBoxColumn();
+            label4 = new Label();
+            btnDeleteTopic = new Button();
+            txtDeleteExchangeName = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             SuspendLayout();
             // 
@@ -153,7 +156,7 @@
             dataGridView.Location = new Point(165, 120);
             dataGridView.Name = "dataGridView";
             dataGridView.RowTemplate.Height = 25;
-            dataGridView.Size = new Size(429, 152);
+            dataGridView.Size = new Size(524, 181);
             dataGridView.TabIndex = 11;
             // 
             // QueueName
@@ -168,11 +171,41 @@
             Ready.HeaderText = "Ready";
             Ready.Name = "Ready";
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(582, 15);
+            label4.Name = "label4";
+            label4.Size = new Size(71, 15);
+            label4.TabIndex = 14;
+            label4.Text = "Delete Topic";
+            // 
+            // btnDeleteTopic
+            // 
+            btnDeleteTopic.Location = new Point(582, 67);
+            btnDeleteTopic.Name = "btnDeleteTopic";
+            btnDeleteTopic.Size = new Size(122, 23);
+            btnDeleteTopic.TabIndex = 13;
+            btnDeleteTopic.Text = "Delete";
+            btnDeleteTopic.UseVisualStyleBackColor = true;
+            btnDeleteTopic.Click += btnDeleteTopic_Click;
+            // 
+            // txtDeleteExchangeName
+            // 
+            txtDeleteExchangeName.Location = new Point(582, 33);
+            txtDeleteExchangeName.Multiline = true;
+            txtDeleteExchangeName.Name = "txtDeleteExchangeName";
+            txtDeleteExchangeName.Size = new Size(122, 28);
+            txtDeleteExchangeName.TabIndex = 12;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(616, 294);
+            ClientSize = new Size(726, 313);
+            Controls.Add(label4);
+            Controls.Add(btnDeleteTopic);
+            Controls.Add(txtDeleteExchangeName);
             Controls.Add(dataGridView);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -208,5 +241,8 @@
         private DataGridView dataGridView;
         private DataGridViewTextBoxColumn QueueName;
         private DataGridViewTextBoxColumn Ready;
+        private Label label4;
+        private Button btnDeleteTopic;
+        private TextBox txtDeleteExchangeName;
     }
 }

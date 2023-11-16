@@ -84,5 +84,16 @@ namespace RabbitMQDashboard
             else
                 MessageBox.Show("Digite um tópico a ser criado.");
         }
+
+        private void btnDeleteTopic_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtDeleteExchangeName.Text))
+            {
+                RabbitMQManager.DeleteExchange(txtDeleteExchangeName.Text);
+                txtCreateExchangeName.Text = "";
+            }
+            else
+                MessageBox.Show("Digite um tópico a ser deletador.");
+        }
     }
 }

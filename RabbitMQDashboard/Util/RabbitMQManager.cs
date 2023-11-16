@@ -90,5 +90,10 @@ namespace RabbitMQDashboard.Util
         {
             GetChannel().ExchangeDeclare(exchangeName, ExchangeType.Topic);
         }
+
+        public static void DeleteExchange(string exchangeName)
+        {
+            GetChannel().ExchangeDelete(exchangeName);
+        }
     }
 }
