@@ -39,6 +39,10 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
+            dataGridView = new DataGridView();
+            QueueName = new DataGridViewTextBoxColumn();
+            Ready = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             SuspendLayout();
             // 
             // btnCreateProducers
@@ -63,7 +67,7 @@
             // 
             // btnCreateQueue
             // 
-            btnCreateQueue.Location = new Point(184, 79);
+            btnCreateQueue.Location = new Point(163, 67);
             btnCreateQueue.Name = "btnCreateQueue";
             btnCreateQueue.Size = new Size(122, 23);
             btnCreateQueue.TabIndex = 2;
@@ -73,7 +77,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(184, 45);
+            textBox1.Location = new Point(163, 33);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(122, 28);
@@ -81,7 +85,7 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(321, 45);
+            textBox2.Location = new Point(300, 33);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(122, 28);
@@ -89,7 +93,7 @@
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(460, 45);
+            textBox3.Location = new Point(439, 33);
             textBox3.Multiline = true;
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(122, 28);
@@ -97,7 +101,7 @@
             // 
             // btnDeleteQueue
             // 
-            btnDeleteQueue.Location = new Point(321, 79);
+            btnDeleteQueue.Location = new Point(300, 67);
             btnDeleteQueue.Name = "btnDeleteQueue";
             btnDeleteQueue.Size = new Size(122, 23);
             btnDeleteQueue.TabIndex = 6;
@@ -107,7 +111,7 @@
             // 
             // btnCreateTopic
             // 
-            btnCreateTopic.Location = new Point(460, 79);
+            btnCreateTopic.Location = new Point(439, 67);
             btnCreateTopic.Name = "btnCreateTopic";
             btnCreateTopic.Size = new Size(122, 23);
             btnCreateTopic.TabIndex = 7;
@@ -118,7 +122,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(184, 27);
+            label1.Location = new Point(163, 15);
             label1.Name = "label1";
             label1.Size = new Size(79, 15);
             label1.TabIndex = 8;
@@ -127,7 +131,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(321, 27);
+            label2.Location = new Point(300, 15);
             label2.Name = "label2";
             label2.Size = new Size(78, 15);
             label2.TabIndex = 9;
@@ -136,17 +140,40 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(460, 27);
+            label3.Location = new Point(439, 15);
             label3.Name = "label3";
             label3.Size = new Size(72, 15);
             label3.TabIndex = 10;
             label3.Text = "Create Topic";
+            // 
+            // dataGridView
+            // 
+            dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView.Columns.AddRange(new DataGridViewColumn[] { QueueName, Ready });
+            dataGridView.Location = new Point(165, 120);
+            dataGridView.Name = "dataGridView";
+            dataGridView.RowTemplate.Height = 25;
+            dataGridView.Size = new Size(429, 152);
+            dataGridView.TabIndex = 11;
+            // 
+            // QueueName
+            // 
+            QueueName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            QueueName.HeaderText = "QueueName";
+            QueueName.Name = "QueueName";
+            // 
+            // Ready
+            // 
+            Ready.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Ready.HeaderText = "Ready";
+            Ready.Name = "Ready";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(616, 294);
+            Controls.Add(dataGridView);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -160,6 +187,7 @@
             Controls.Add(btnCreateProducers);
             Name = "Form1";
             Text = "Dashboard";
+            ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -177,5 +205,8 @@
         private Label label1;
         private Label label2;
         private Label label3;
+        private DataGridView dataGridView;
+        private DataGridViewTextBoxColumn QueueName;
+        private DataGridViewTextBoxColumn Ready;
     }
 }

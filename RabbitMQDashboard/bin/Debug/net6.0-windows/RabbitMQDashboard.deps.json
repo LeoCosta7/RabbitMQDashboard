@@ -6,6 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
+      "RabbitMQDashboard/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "RabbitMQ.Client": "6.6.0"
+        },
+        "runtime": {
+          "RabbitMQDashboard.dll": {}
+        }
+      },
       "Newtonsoft.Json/13.0.3": {
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
@@ -38,6 +47,11 @@
     }
   },
   "libraries": {
+    "RabbitMQDashboard/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Newtonsoft.Json/13.0.3": {
       "type": "package",
       "serviceable": true,
