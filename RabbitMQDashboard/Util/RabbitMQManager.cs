@@ -26,6 +26,30 @@ namespace RabbitMQDashboard.Util
             return channel;
         }
 
+        public static List<T> GetInfos<T>(string baseUrl)
+        {
+            string username = "guest";
+            string password = "guest";
+
+            List<T> infos = new List<T>();
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(baseUrl);
+            request.Method = "GET";
+            request.Headers["Authorization"] = "Basic " + Convert.ToBase64String(Encoding.ASCII.GetBytes(username + ":" + password));
+
+            using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+            using (Stream stream = response.GetResponseStream())
+            using (StreamReader reader = new StreamReader(stream))
+            {
+                if (response.StatusCode == HttpStatusCode.OK)
+                {
+                    string json = reader.ReadToEnd();
+                    infos = JsonConvert.DeserializeObject<List<T>>(json);
+                }
+            }
+
+            return infos;
+        }
+
         public static List<QueueInfo> GetQueueInfos()
         {
             string baseUrl = "http://localhost:15672/api/queues";

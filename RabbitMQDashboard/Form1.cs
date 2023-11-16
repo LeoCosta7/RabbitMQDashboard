@@ -11,8 +11,10 @@ namespace RabbitMQDashboard
         {
             InitializeComponent();
 
+            Infos();
+
             updateTimer = new System.Windows.Forms.Timer();
-            updateTimer.Interval = 2000;
+            updateTimer.Interval = 4000;
             updateTimer.Tick += new EventHandler(UpdateTimer_Tick);
             updateTimer.Start();
         }
@@ -25,11 +27,16 @@ namespace RabbitMQDashboard
 
         private void Infos()
         {
-            List<QueueInfo> queueInfos = RabbitMQManager.GetQueueInfos();
+            List<QueueInfo> queueInfos = RabbitMQManager.GetInfos<QueueInfo>("http://localhost:15672/api/queues");
+            List<ExchangeInfo> exchangeInfo = RabbitMQManager.GetInfos<ExchangeInfo>("http://localhost:15672/api/exchanges");
 
-            foreach (QueueInfo queueInfo in queueInfos)
+            var combinedList = queueInfos.Select(q => new ResourceInfo { Name = q.Name, Messages = q.Messages })
+               .Concat(exchangeInfo.Select(e => new ResourceInfo { Name = e.Name }))
+               .ToList();
+
+            foreach (ResourceInfo Infos in combinedList)
             {
-                dataGridView.Rows.Add(queueInfo.Name, queueInfo.Messages);
+                dataGridView.Rows.Add(Infos.Name, Infos.Messages);
             }
         }
 
