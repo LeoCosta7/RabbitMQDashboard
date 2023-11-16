@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nameless\\Desktop\\TESTES MOM\\RabbitMQDashboard\\RabbitMQDashboard\\RabbitMQDashboard.csproj": {}
+    "C:\\Users\\Nameless\\Documents\\Github\\RabbitMQDashboard\\RabbitMQDashboard\\RabbitMQDashboard.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nameless\\Desktop\\TESTES MOM\\RabbitMQDashboard\\RabbitMQDashboard\\RabbitMQDashboard.csproj": {
+    "C:\\Users\\Nameless\\Documents\\Github\\RabbitMQDashboard\\RabbitMQDashboard\\RabbitMQDashboard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nameless\\Desktop\\TESTES MOM\\RabbitMQDashboard\\RabbitMQDashboard\\RabbitMQDashboard.csproj",
+        "projectUniqueName": "C:\\Users\\Nameless\\Documents\\Github\\RabbitMQDashboard\\RabbitMQDashboard\\RabbitMQDashboard.csproj",
         "projectName": "RabbitMQDashboard",
-        "projectPath": "C:\\Users\\Nameless\\Desktop\\TESTES MOM\\RabbitMQDashboard\\RabbitMQDashboard\\RabbitMQDashboard.csproj",
+        "projectPath": "C:\\Users\\Nameless\\Documents\\Github\\RabbitMQDashboard\\RabbitMQDashboard\\RabbitMQDashboard.csproj",
         "packagesPath": "C:\\Users\\Nameless\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nameless\\Desktop\\TESTES MOM\\RabbitMQDashboard\\RabbitMQDashboard\\obj\\",
+        "outputPath": "C:\\Users\\Nameless\\Documents\\Github\\RabbitMQDashboard\\RabbitMQDashboard\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Nameless\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.6.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
