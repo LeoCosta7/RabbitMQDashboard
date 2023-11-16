@@ -1,16 +1,31 @@
 ﻿using Newtonsoft.Json;
+using RabbitMQ.Client;
 using RabbitMQDashboard.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace RabbitMQDashboard.Util
 {
     public class RabbitMQManager
     {
+        private static IModel channel;
+
+        public static IModel GetChannel()
+        {
+            if (channel == null || channel.IsClosed)
+            {
+                var factory = new ConnectionFactory
+                {
+                    HostName = "localhost"
+                };
+
+                IConnection connection = factory.CreateConnection();
+                channel = connection.CreateModel();
+            }
+
+            return channel;
+        }
+
         public static List<QueueInfo> GetQueueInfos()
         {
             string baseUrl = "http://localhost:15672/api/queues";
@@ -34,6 +49,22 @@ namespace RabbitMQDashboard.Util
             }
 
             return queueInfos;
+        }
+
+        public static void DeleteQueue(string queueName)
+        {
+            IModel channel = GetChannel();
+            channel.QueueDelete(queueName);
+        }
+
+        public static void CreateQueue(string queueName)
+        {
+            GetChannel().QueueDeclare(queueName, true, false, false, null);
+        }
+
+        public static void CreateExchange(string exchangeName)
+        {
+            GetChannel().ExchangeDeclare(exchangeName, ExchangeType.Topic);
         }
     }
 }

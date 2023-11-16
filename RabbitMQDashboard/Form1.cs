@@ -1,6 +1,5 @@
 using RabbitMQDashboard.Data;
 using RabbitMQDashboard.Util;
-using System.Windows.Forms;
 
 namespace RabbitMQDashboard
 {
@@ -13,9 +12,9 @@ namespace RabbitMQDashboard
             InitializeComponent();
 
             updateTimer = new System.Windows.Forms.Timer();
-            updateTimer.Interval = 2000; 
+            updateTimer.Interval = 2000;
             updateTimer.Tick += new EventHandler(UpdateTimer_Tick);
-            updateTimer.Start(); 
+            updateTimer.Start();
         }
 
         private void UpdateTimer_Tick(object sender, EventArgs e)
@@ -46,17 +45,35 @@ namespace RabbitMQDashboard
 
         private void btnCreateQueue_Click(object sender, EventArgs e)
         {
-
+            if (!string.IsNullOrEmpty(txtCreateQueueName.Text))
+            {
+                RabbitMQManager.CreateQueue(txtCreateQueueName.Text);
+                txtCreateQueueName.Text = "";
+            }
+            else
+                MessageBox.Show("Digite a fila a ser criada.");
         }
 
         private void btnDeleteQueue_Click(object sender, EventArgs e)
         {
-
+            if (!string.IsNullOrEmpty(txtDeleteQueueName.Text))
+            {
+                RabbitMQManager.DeleteQueue(txtDeleteQueueName.Text);
+                txtDeleteQueueName.Text = "";
+            }
+            else
+                MessageBox.Show("Escolha uma fila para deletar");
         }
 
         private void btnCreateTopic_Click(object sender, EventArgs e)
         {
-
+            if (!string.IsNullOrEmpty(txtCreateExchangeName.Text))
+            {
+                RabbitMQManager.CreateExchange(txtCreateExchangeName.Text);
+                txtCreateExchangeName.Text = "";
+            }
+            else
+                MessageBox.Show("Digite um tópico a ser criado.");
         }
     }
 }

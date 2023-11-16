@@ -31,9 +31,9 @@
             btnCreateProducers = new Button();
             btnCreateConsumers = new Button();
             btnCreateQueue = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
+            txtCreateQueueName = new TextBox();
+            txtDeleteQueueName = new TextBox();
+            txtCreateExchangeName = new TextBox();
             btnDeleteQueue = new Button();
             btnCreateTopic = new Button();
             label1 = new Label();
@@ -75,29 +75,29 @@
             btnCreateQueue.UseVisualStyleBackColor = true;
             btnCreateQueue.Click += btnCreateQueue_Click;
             // 
-            // textBox1
+            // txtCreateQueueName
             // 
-            textBox1.Location = new Point(163, 33);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(122, 28);
-            textBox1.TabIndex = 3;
+            txtCreateQueueName.Location = new Point(163, 33);
+            txtCreateQueueName.Multiline = true;
+            txtCreateQueueName.Name = "txtCreateQueueName";
+            txtCreateQueueName.Size = new Size(122, 28);
+            txtCreateQueueName.TabIndex = 3;
             // 
-            // textBox2
+            // txtDeleteQueueName
             // 
-            textBox2.Location = new Point(300, 33);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(122, 28);
-            textBox2.TabIndex = 4;
+            txtDeleteQueueName.Location = new Point(300, 33);
+            txtDeleteQueueName.Multiline = true;
+            txtDeleteQueueName.Name = "txtDeleteQueueName";
+            txtDeleteQueueName.Size = new Size(122, 28);
+            txtDeleteQueueName.TabIndex = 4;
             // 
-            // textBox3
+            // txtCreateExchangeName
             // 
-            textBox3.Location = new Point(439, 33);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(122, 28);
-            textBox3.TabIndex = 5;
+            txtCreateExchangeName.Location = new Point(439, 33);
+            txtCreateExchangeName.Multiline = true;
+            txtCreateExchangeName.Name = "txtCreateExchangeName";
+            txtCreateExchangeName.Size = new Size(122, 28);
+            txtCreateExchangeName.TabIndex = 5;
             // 
             // btnDeleteQueue
             // 
@@ -179,9 +179,9 @@
             Controls.Add(label1);
             Controls.Add(btnCreateTopic);
             Controls.Add(btnDeleteQueue);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtCreateExchangeName);
+            Controls.Add(txtDeleteQueueName);
+            Controls.Add(txtCreateQueueName);
             Controls.Add(btnCreateQueue);
             Controls.Add(btnCreateConsumers);
             Controls.Add(btnCreateProducers);
@@ -197,9 +197,9 @@
         private Button btnCreateProducers;
         private Button btnCreateConsumers;
         private Button btnCreateQueue;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox txtCreateQueueName;
+        private TextBox txtDeleteQueueName;
+        private TextBox txtCreateExchangeName;
         private Button btnDeleteQueue;
         private Button btnCreateTopic;
         private Label label1;
