@@ -90,7 +90,7 @@ namespace RabbitMQDashboard
             if (!string.IsNullOrEmpty(txtDeleteExchangeName.Text))
             {
                 RabbitMQManager.DeleteExchange(txtDeleteExchangeName.Text);
-                txtCreateExchangeName.Text = "";
+                txtDeleteExchangeName.Text = "";
             }
             else
                 MessageBox.Show("Digite um tópico a ser deletador.");

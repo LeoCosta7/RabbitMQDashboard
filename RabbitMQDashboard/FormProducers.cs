@@ -1,21 +1,11 @@
 ﻿using RabbitMQ.Client;
 using RabbitMQDashboard.Util;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace RabbitMQDashboard
 {
     public partial class Producer : Form
     {
-        public string queueName = "AUX";
-
         public Producer()
         {
             InitializeComponent();

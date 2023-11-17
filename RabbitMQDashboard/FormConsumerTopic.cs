@@ -13,7 +13,7 @@ namespace RabbitMQDashboard
         public ConsumerTopic()
         {
             InitializeComponent();
-        }        
+        }
 
         private void btnSubscribe_Click(object sender, EventArgs e)
         {
@@ -30,7 +30,7 @@ namespace RabbitMQDashboard
             catch
             {
                 MessageBox.Show("Topico inexistente");
-            }            
+            }
         }
 
         private string GetQueueName()
