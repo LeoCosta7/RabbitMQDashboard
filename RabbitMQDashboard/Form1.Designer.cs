@@ -40,14 +40,14 @@
             label2 = new Label();
             label3 = new Label();
             dataGridView = new DataGridView();
-            QueueName = new DataGridViewTextBoxColumn();
-            Ready = new DataGridViewTextBoxColumn();
             label4 = new Label();
             btnDeleteTopic = new Button();
             txtDeleteExchangeName = new TextBox();
             panel1 = new Panel();
             panel2 = new Panel();
             panel3 = new Panel();
+            QueueName = new DataGridViewTextBoxColumn();
+            Ready = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -178,18 +178,6 @@
             dataGridView.Size = new Size(539, 181);
             dataGridView.TabIndex = 11;
             // 
-            // QueueName
-            // 
-            QueueName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            QueueName.HeaderText = "QueueName";
-            QueueName.Name = "QueueName";
-            // 
-            // Ready
-            // 
-            Ready.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Ready.HeaderText = "Ready";
-            Ready.Name = "Ready";
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -259,6 +247,18 @@
             panel3.Size = new Size(128, 142);
             panel3.TabIndex = 16;
             // 
+            // QueueName
+            // 
+            QueueName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            QueueName.HeaderText = "Name";
+            QueueName.Name = "QueueName";
+            // 
+            // Ready
+            // 
+            Ready.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Ready.HeaderText = "Ready";
+            Ready.Name = "Ready";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -291,13 +291,13 @@
         private Label label2;
         private Label label3;
         private DataGridView dataGridView;
-        private DataGridViewTextBoxColumn QueueName;
-        private DataGridViewTextBoxColumn Ready;
         private Label label4;
         private Button btnDeleteTopic;
         private TextBox txtDeleteExchangeName;
         private Panel panel1;
         private Panel panel2;
         private Panel panel3;
+        private DataGridViewTextBoxColumn QueueName;
+        private DataGridViewTextBoxColumn Ready;
     }
 }

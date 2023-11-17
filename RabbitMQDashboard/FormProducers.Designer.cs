@@ -94,7 +94,7 @@
             // 
             // MessageTextBox
             // 
-            MessageTextBox.Location = new Point(190, 28);
+            MessageTextBox.Location = new Point(190, 23);
             MessageTextBox.Multiline = true;
             MessageTextBox.Name = "MessageTextBox";
             MessageTextBox.Size = new Size(177, 71);
